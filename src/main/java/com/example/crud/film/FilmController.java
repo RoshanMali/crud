@@ -18,4 +18,9 @@ public class FilmController {
     public @ResponseBody Response getFilms(@RequestBody Map<Object, String> data) {
         return filmService.getFilms(Integer.parseInt(data.get("pageNo")), Integer.parseInt(data.get("pageSize")), data.get("sortBy"), data.get("sortOrder"), data.get("filmSearchStr"));
     }
+
+    @GetMapping(path = "/updateYear")
+    public @ResponseBody String updateYear(@RequestParam Integer year, @RequestParam Integer id) {
+        return filmService.updateYear(year, id);
+    }
 }

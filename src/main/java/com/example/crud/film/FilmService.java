@@ -32,4 +32,9 @@ public class FilmService {
         response.setData(data);
         return response;
     }
+
+    public String updateYear(Integer year, Integer id) {
+     filmRepository.updateReleaseYearById(year, id);
+     return "OK";
+    }
 }
