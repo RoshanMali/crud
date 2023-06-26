@@ -49,5 +49,4 @@ public class UserController {
         userRepository.deleteAll();
         return true;
     }
-
 }
